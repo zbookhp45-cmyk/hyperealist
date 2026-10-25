@@ -1,0 +1,1790 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.yuqori-menyu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.brend-nomi img {
+    position: relative;
+    top: -20px;
+    
+  height: 30px;
+  width: auto;
+  display: block;
+ 
+ 
+}
+
+.tugma-menyu {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #D90000;
+  border-radius: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.tugma-menyu span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #ccff00;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.tugma-menyu:hover {
+  background-color: #0000ff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 81, 0.4);
+}
+
+.tugma-menyu:hover span {
+  background-color: #0d0d0d;
+}
+
+.bosh-qism {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 2rem;
+  top: -110px;
+}
+
+.tepa-yonalish {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccff00;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.tepa-yonalish:hover i {
+  transform: translate(-50%, 6px);
+}
+
+.yon-yozuv {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #ccff00;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chap-yon {
+  left: 4rem;
+}
+
+.o-ng-yon {
+  right: 4rem;
+}
+
+.chap-yon:hover {
+  transform: translateY(-50%) translateX(-5px);
+}
+
+.o-ng-yon:hover {
+  transform: translateY(-50%) translateX(5px);
+}
+
+.yon-yozuv .chiziq {
+  width: 30px;
+  height: 1px;
+  background-color: #ccff00;
+  transition: width 0.3s ease;
+}
+
+.yon-yozuv:hover .chiziq {
+  width: 60px;
+}
+
+.yon-yozuv .xira-matn {
+  color: #f70707;
+  transition: color 0.3s ease;
+}
+
+.yon-yozuv:hover .xira-matn {
+  color: #04fe58;
+}
+
+.markaziy-blok {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.yulduzcha-belgi {
+  color: #ccff00;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.yulduzcha-belgi:hover {
+  transform: rotate(180deg) scale(1.3);
+}
+
+.orqa-fon-rasm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 650px;
+  pointer-events: none;
+  z-index: 1;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.orqa-fon-rasm img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+.markaziy-blok:hover .orqa-fon-rasm {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(204, 255, 0, 0.3));
+}
+
+.asosiy-sarlavha {
+  position: relative;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  color: #ffffff;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  top: 20px;
+  z-index: 2;
+  margin-bottom: 2rem;
+ 
+  transition:  0.3s ease, transform 0.3s ease;
+}
+
+.asosiy-sarlavha:hover {
+    color: #f3fc01;
+    transform: scale(1.02);
+}
+
+.asosiy-sarlavha .qavs {
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.asosiy-sarlavha:hover .qavs {
+  color: #fc6f2e;
+}
+
+.pastki-ma-lumot {
+  top: 100px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  flex-direction: column;                               
+  align-items: flex-start;
+  gap: 1.9rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+  margin-left: 120px;
+}
+
+.nishan-qatori {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nishan-belgi {
+  background-color: #ccff00;
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nishan-belgi:hover {
+  background-color: #91008D;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.transkripsiya {
+  font-size: 0.75rem;
+  color: #ccff00;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.transkripsiya:hover {
+  color: #ff0095;
+}
+
+.tavsif-matn {
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.tavsif-matn:hover {
+  color: #48ff00;
+}
+
+.yon-mukofot-belgi {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1.5rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 700;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.yon-mukofot-belgi:hover {
+  transform: translateX(-5px);
+  background-color: #ccff00;
+  color: #000000;
+}
+
+.yon-mukofot-belgi .mukofot-logotip {
+  font-size: 1.2rem;
+  font-family: serif;
+  font-weight: 900;
+}
+
+.yon-mukofot-belgi .tik-yozuv {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .yon-yozuv {
+    display: none;
+  }
+  .pastki-ma-lumot {
+    margin-left: 0;
+    align-items: center;
+  }
+  .tavsif-matn {
+    text-align: center;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+.portfolio-qism {
+  position: relative;
+  padding: 5rem 4rem;
+  background-color: #0d0d0d;
+  width: 100%;
+}
+
+.portfolio-sarlavha {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid #222222;
+  padding-bottom: 2rem;
+}
+
+.kichik-ish-yozuv {
+  position: relative;
+  left: 150px;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-family: serif;
+  color: #cccccc;
+}
+
+.katta-sarlavha {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.9rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.aloqa-tugma {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #555555;
+  border-radius: 20px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aloqa-tugma:hover {
+  background-color: #ccff00;
+  color: #000000;
+  border-color: #ccff00;
+  box-shadow: 0 0 12px rgba(204, 255, 0, 0.4);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-karta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.karta-rasm-box {
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+}
+
+.karta-rasm-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.karta-rasm-box img:hover {
+  transform: scale(1.04);
+}
+
+.karta-malumot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.belgi-ortach {
+  color: #ccff00;
+  font-size: 0.75rem;
+}
+
+.karta-nomi {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.teglar-qatori {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.teg {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.teg:hover {
+  background-color: #1adb00;
+  color: #000000;
+  transform: translateY(-2px);
+}
+.portfolio-karta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative; 
+}
+
+.dumaloq-rasm-blok {
+  position: absolute;
+  top: -95px;   
+  margin-right: 19  0px;
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+  z-index: 10;
+  animation: tepaPastgaSuzish 4s ease-in-out infinite;
+}
+
+.dumaloq-rasm-blok img {
+  width: 300%;
+  height: 300%;
+  object-fit: contain;
+}
+
+@keyframes tepaPastgaSuzish {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 900px) {
+  .portfolio-qism {
+    padding: 2rem 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .portfolio-sarlavha {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .dumaloq-rasm-blok {
+    width: 70px;
+    height: 70px;
+    top: -15px;
+    left: -15px;
+  }
+} 
+
+.agence-qism {
+  position: relative;
+  padding: 6rem 5rem;
+  background-color: #0d0d0d;
+  color: #ccff00;
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.kichik-sarlavha {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ccff00;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.katta-sarlavha-agence {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ccff00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.voulons-blok {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.voulons-btn {
+  background-color: #ccff00;
+  color: #0d0d0d;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+
+.nuqtalar {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.nuqta {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.nuqta.aktiv {
+  background-color: #ccff00;
+}
+.markaziy-doira-quti {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 5rem auto;
+  padding: 5rem 6rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matnlar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 560px; 
+  margin: 0 auto;
+}
+
+.ustun {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.band {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.belgi {
+  color: #ccff00;
+  font-size: 0.65rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.band p {
+  font-size: 0.68rem; 
+  color: #ccff00;
+  line-height: 1.25;
+  opacity: 0.95;
+}
+
+.oval-rasm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.matnlar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.ustun {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.band {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.belgi {
+  color: #ccff00;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
+}
+
+.band p {
+  font-size: 0.95rem;
+  color: #ccff00;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.dumaloq-harflar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 3;
+}
+
+.dumaloq-harflar span {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ccff00;
+}
+
+.domenlar-bolimi {
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.domen-sarlavha {
+  color: #ccff00;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.domen-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.domen-qator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.domen-qator:last-child {
+  border-bottom: none;
+}
+
+.domen-cell {
+  padding: 1.2rem 1.5rem;
+  font-size: 0.85rem;
+  color: #ccff00;
+  border-right: 1px solid rgba(204, 255, 0, 0.3);
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.domen-cell:last-child {
+  border-right: none;
+}
+
+.pastki-tugma-quti {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+}
+
+.metodologiya-btn {
+  background-color: transparent;
+  color: #ccff00;
+  border: 1px solid #ccff00;
+  border-radius: 30px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.metodologiya-btn:hover {
+  background-color: #ccff00;
+  color: #0d0d0d;
+}
+
+@media (max-width: 900px) {
+  .agence-qism {
+    padding: 2rem 1.5rem;
+  }
+  .matnlar-grid {
+    grid-template-columns: 1fr;
+  }
+  .domen-qator {
+    grid-template-columns: 1fr;
+  }
+  .domen-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ccff00;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+.portfolio-qism {
+  position: relative;
+  padding: 6rem 5rem;
+  background-color: #0d0d0d;
+  width: 100%;
+}
+
+.portfolio-sarlavha {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.2);
+  padding-bottom: 2rem;
+}
+
+.kichik-ish-yozuv {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-family: serif;
+  color: #ccff00;
+  opacity: 0.8;
+}
+
+.katta-sarlavha {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  color: #ccff00;
+  text-transform: uppercase;
+}
+
+.aloqa-tugma {
+  background-color: transparent;
+  color: #ccff00;
+  border: 1px solid #ccff00;
+  border-radius: 20px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aloqa-tugma:hover {
+  background-color: #ccff00;
+  color: #0d0d0d;
+  box-shadow: 0 0 12px rgba(204, 255, 0, 0.4);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-karta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.karta-rasm-box {
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+}
+
+.karta-rasm-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.karta-rasm-box img:hover {
+  transform: scale(1.04);
+}
+
+.karta-malumot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.belgi-ortach {
+  color: #ccff00;
+  font-size: 0.75rem;
+}
+
+.karta-nomi {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ccff00;
+  text-transform: uppercase;
+}
+
+.teglar-qatori {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.teg {
+  background-color: #ccff00;
+  color: #0d0d0d;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.teg:hover {
+  background-color: #ffffff;
+  color: #0d0d0d;
+  transform: translateY(-2px);
+}
+
+.dumaloq-rasm-blok {
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+  z-index: 10;
+  animation: tepaPastgaSuzish 4s ease-in-out infinite;
+}
+
+.dumaloq-rasm-blok img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes tepaPastgaSuzish {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.agence-qism {
+  position: relative;
+  padding: 6rem 5rem;
+  background-color: #0d0d0d;
+  color: #ccff00;
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.kichik-sarlavha {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ccff00;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.katta-sarlavha-agence {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ccff00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.voulons-blok {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.voulons-btn {
+  background-color: #ccff00;
+  color: #0d0d0d;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+
+.nuqtalar {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.nuqta {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.nuqta.aktiv {
+  background-color: #ccff00;
+}
+
+.markaziy-doira-quti {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 5rem auto;
+  padding: 6rem 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oval-rasm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.matnlar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.ustun {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.band {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.belgi {
+  color: #ccff00;
+  font-size: 0.7rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.band p {
+  font-size: 0.72rem;
+  color: #ccff00;
+  line-height: 1.3;
+  opacity: 0.95;
+}
+
+.dumaloq-harflar {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 3;
+}
+
+.dumaloq-harflar span {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ccff00;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dumaloq-harflar span:hover {
+  background-color: #888888;
+  border-color: #888888;
+  color: #0d0d0d;
+}
+
+.domenlar-bolimi {
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.domen-sarlavha {
+  color: #ccff00;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.domen-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.domen-qator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.domen-qator:last-child {
+  border-bottom: none;
+}
+
+.domen-cell {
+  padding: 1.2rem 1.5rem;
+  font-size: 0.85rem;
+  color: #ccff00;
+  border-right: 1px solid rgba(204, 255, 0, 0.3);
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.domen-cell:last-child {
+  border-right: none;
+}
+
+.pastki-tugma-quti {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 950px;
+  margin: 3rem auto 0 auto;
+}
+
+.metodologiya-btn {
+  background-color: transparent;
+  color: #ccff00;
+  border: 1px solid #ccff00;
+  border-radius: 30px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.metodologiya-btn:hover {
+  background-color: #ccff00;
+  color: #0d0d0d;
+}
+
+@media (max-width: 900px) {
+  .portfolio-qism,
+  .agence-qism {
+    padding: 2rem 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .markaziy-doira-quti {
+    padding: 3rem 1.5rem;
+  }
+
+  .matnlar-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .domen-qator {
+    grid-template-columns: 1fr;
+  }
+
+  .domen-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+  }
+}
+
+.agence-qism {
+  position: relative;
+  padding: 6rem 5rem;
+  background-color: #0d0d0d;
+  color: #ccff00;
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.kichik-sarlavha {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ccff00;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.katta-sarlavha-agence {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ccff00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.voulons-blok {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.voulons-btn {
+  background-color: #ccff00;
+  color: #0d0d0d;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+
+.nuqtalar {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.nuqta {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.nuqta.aktiv {
+  background-color: #ccff00;
+}
+
+.markaziy-doira-quti {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 5rem auto;
+  padding: 5rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oval-rasm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.matnlar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.ustun {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.belgi {
+  display: flex;
+  align-items: center;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.belgi img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.band p {
+  font-size: 0.65rem;
+  color: #ccff00;
+  line-height: 1.3;
+  opacity: 0.95;
+  transition: color 0.3s ease;
+}
+
+.band:hover p {
+  color: #002fff;
+}
+
+.dumaloq-harflar {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 3;
+}
+
+.dumaloq-harflar span {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ccff00;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dumaloq-harflar span:hover {
+  background-color: #f80000;
+  border-color: #ff0000;
+  color: #0d0d0d;
+}
+
+.domenlar-bolimi {
+  border: 1px solid rgba(253, 253, 252, 0.3);
+  max-width: 980px;
+  margin: 0 auto;
+  transition: border-color 0.3s ease;
+}
+
+.domen-sarlavha {
+  color: #ccff00;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+  background-color: rgba(204, 255, 0, 0.02);
+}
+
+.domen-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.domen-qator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.domen-qator:last-child {
+  border-bottom: none;
+}
+
+.domen-cell {
+  padding: 1.2rem 1.5rem;
+  font-size: 0.85rem;
+  color: #ccff00;
+  border-right: 1px solid rgba(204, 255, 0, 0.3);
+  line-height: 1.4;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.domen-cell:last-child {
+  border-right: none;
+}
+
+.domen-cell:hover {
+  background-color: rgba(21, 255, 0, 0.12);
+  color: #ffffff;
+}
+
+.pastki-tugma-quti {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 980px;
+  margin: 3rem auto 0 auto;
+}
+
+.metodologiya-btn {
+  background-color: transparent;
+  color: #ccff00;
+  border: 1px solid #ccff00;
+  border-radius: 30px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.metodologiya-btn:hover {
+  background-color: #00ead2;
+  color: #0d0d0d;
+  box-shadow: 0 0 15px rgba(195, 195, 195, 0.4);
+}
+
+@media (max-width: 900px) {
+  .agence-qism {
+    padding: 2rem 1.5rem;
+  }
+  .matnlar-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .domen-qator {
+    grid-template-columns: 1fr;
+  }
+  .domen-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+  }
+}
+
+.clients-section {
+  position: relative;
+  background-color: #0d0d0d;
+  color: #3b82f6; 
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 4rem 5rem;
+}
+
+.quote-banner {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  background-image: url(young.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+
+.quote-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 13, 13, 0.7); 
+  z-index: 1;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.quote-text {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #3b82f6; 
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.quote-author {
+  background-color: #3b82f6; 
+  color: #0d0d0d;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.clients-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clients-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #3b82f6; 
+  display: block;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid rgba(59, 130, 246, 0.3); 
+}
+
+.client-card {
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  border-right: 1px solid rgba(59, 130, 246, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.client-card:nth-child(even) {
+  border-right: none;
+}
+
+.client-card:hover {
+  background-color: rgba(255, 0, 0, 0.1); 
+}
+
+.client-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #3b82f6; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.client-desc {
+  font-size: 0.85rem;
+  color: #3b82f6; 
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .clients-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .quote-banner {
+    min-height: auto;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-card {
+    border-right: none;
+  }
+}
+
+.footer-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 5rem;
+  overflow: hidden;
+}
+
+.star-animated-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+  animation: tepaPastgaSuzish 4s ease-in-out infinite;
+}
+
+.floating-star-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes tepaPastgaSuzish {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.contact-btn-wrapper {
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nous-contacter-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  color: #ccff00; 
+  border: 1px solid #ccff00;
+  border-radius: 40px;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.3s ease;
+  margin-top: -100px;
+}
+
+.nous-contacter-btn:hover {
+  background-color: #1900ff;
+  color: #0d0d0d;
+ 
+}
+
+@media (max-width: 900px) {
+  .footer-hero-section {
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    min-height: 400px;
+    gap: 3rem;
+  }
+
+  .contact-btn-wrapper {
+    position: static;
+    transform: none;
+  }
+
+  .star-animated-container {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.site-footer {
+  width: 100%;
+  background-color: #0d0d0d;
+  color: #3b82f6; 
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 4rem 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+.footer-top-links {
+  display: flex;
+  gap: 3rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-bottom: 3.5rem;
+}
+
+.footer-small-link, .footer-copy {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footer-main-nav {
+  display: flex;
+  gap: 5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-nav-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .site-footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-top-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
